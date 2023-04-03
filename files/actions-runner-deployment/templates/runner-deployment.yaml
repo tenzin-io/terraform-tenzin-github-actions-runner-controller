@@ -1,0 +1,9 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: actions-runner-deployment
+spec:
+  replicas: {{ .Values.github_runners_ready }}
+  template:
+    spec:
+      organization: {{ .Values.github_org_name }}
