@@ -1,6 +1,9 @@
 # README
-The Helm chart repo can be found here: <https://github.com/actions/actions-runner-controller/tree/master/charts/actions-runner-controller>.
-The actions-runner-controller is configured to use the GitHub apps style authentication.  More details of setting this up can be found here: <https://github.com/actions/actions-runner-controller/blob/master/docs/authenticating-to-the-github-api.md>.
+This Terraform module installs GitHub Actions runner controller on a Kubernetes cluster.
+
+**More details**
+- <https://github.com/actions/actions-runner-controller/tree/master/charts/actions-runner-controller>
+- <https://github.com/actions/actions-runner-controller/blob/master/docs/authenticating-to-the-github-api.md>
 
 <!-- BEGIN_TF_DOCS -->
 
