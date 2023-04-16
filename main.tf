@@ -50,6 +50,11 @@ resource "helm_release" "actions_runner_deployment" {
     value = var.github_runners_ready
   }
 
+  set {
+    name  = "runner_labels"
+    value = "{${var.github_runner_labels}}"
+  }
+
   depends_on = [helm_release.actions_runner_controller]
 }
 

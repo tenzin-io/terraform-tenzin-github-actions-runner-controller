@@ -29,5 +29,6 @@ This Terraform module installs GitHub Actions runner controller on a Kubernetes 
 | <a name="input_github_app_installation_id"></a> [github\_app\_installation\_id](#input\_github\_app\_installation\_id) | n/a | `string` | n/a | yes |
 | <a name="input_github_app_private_key"></a> [github\_app\_private\_key](#input\_github\_app\_private\_key) | n/a | `string` | n/a | yes |
 | <a name="input_github_org_name"></a> [github\_org\_name](#input\_github\_org\_name) | n/a | `string` | n/a | yes |
-| <a name="input_github_runners_ready"></a> [github\_runners\_ready](#input\_github\_runners\_ready) | n/a | `number` | `3` | no |
+| <a name="input_github_runner_labels"></a> [github\_runner\_labels](#input\_github\_runner\_labels) | Comma separated values of labels to place on runner | `string` | `""` | no |
+| <a name="input_github_runners_ready"></a> [github\_runners\_ready](#input\_github\_runners\_ready) | The number of runners to be registered | `number` | `3` | no |
 <!-- END_TF_DOCS -->

@@ -16,6 +16,13 @@ variable "github_app_private_key" {
 }
 
 variable "github_runners_ready" {
-  type    = number
-  default = 3
+  type        = number
+  default     = 3
+  description = "The number of runners to be registered"
+}
+
+variable "github_runner_labels" {
+  type        = string
+  default     = ""
+  description = "Comma separated values of labels to place on runner"
 }

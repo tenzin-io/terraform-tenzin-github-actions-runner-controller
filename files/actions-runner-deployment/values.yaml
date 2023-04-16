@@ -1,2 +1,4 @@
-github_org_name: ""
+github_org_name: homelab
 github_runners_ready: 3
+runner_labels:
+  - homelab

@@ -7,3 +7,7 @@ spec:
   template:
     spec:
       organization: {{ .Values.github_org_name }}
+      {{- with .Values.runner_labels }}
+      labels:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
