@@ -1,4 +1,7 @@
 github_org_name: homelab
-github_runners_ready: 3
-runner_labels:
-  - homelab
+
+runner:
+  image: ghcr.io/actions/actions-runner-controller/actions-runner-dind:ubuntu-20.04
+  ready: 3
+  labels:
+    - homelab

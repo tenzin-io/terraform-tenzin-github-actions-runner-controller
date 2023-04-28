@@ -3,11 +3,13 @@ kind: RunnerDeployment
 metadata:
   name: actions-runner-deployment
 spec:
-  replicas: {{ .Values.github_runners_ready }}
+  replicas: {{ .Values.runner.ready }}
   template:
     spec:
+      image: {{ .Values.runner.image }}
+      dockerdWithinRunnerContainer: true
       organization: {{ .Values.github_org_name }}
-      {{- with .Values.runner_labels }}
+      {{- with .Values.runner.labels }}
       labels:
         {{- toYaml . | nindent 8 }}
       {{- end }}

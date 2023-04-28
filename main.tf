@@ -46,12 +46,17 @@ resource "helm_release" "actions_runner_deployment" {
   }
 
   set {
-    name  = "github_runners_ready"
-    value = var.github_runners_ready
+    name  = "runner.ready"
+    value = var.github_runner_ready
   }
 
   set {
-    name  = "runner_labels"
+    name  = "runner.image"
+    value = var.github_runner_image
+  }
+
+  set {
+    name  = "runner.labels"
     value = "{${var.github_runner_labels}}"
   }
 
