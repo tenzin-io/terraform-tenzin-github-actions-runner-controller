@@ -5,3 +5,10 @@ runner:
   ready: 3
   labels:
     - homelab
+
+  env:
+    - name: CONDA_PREFIX
+      value: "/home/runner/anaconda3/"
+
+    - name: LD_LIBRARY_PATH
+      value: "/home/runner/anaconda3/lib/:/home/runner/.local/lib/python3.10/site-packages/nvidia/cudnn/lib"
