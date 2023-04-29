@@ -18,3 +18,13 @@ spec:
       env:
         {{- toYaml . | nindent 8 }}
       {{- end }} 
+      resources:
+        limits:
+          nvidia.com/gpu: "{{ .Values.runner.gpu_request }}"
+      volumeMounts:
+      - mountPath: /home/runner/.cache
+        name: cache-volume
+      volumes:
+      - name: cache-volume
+        persistentVolumeClaim:
+          claimName: cache-pvc

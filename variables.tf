@@ -32,3 +32,9 @@ variable "github_runner_image" {
   default     = "ghcr.io/actions/actions-runner-controller/actions-runner-dind:ubuntu-20.04"
   description = "The container image of runner"
 }
+
+variable "enable_nvidia_gpu" {
+  type        = bool
+  default     = false
+  description = "The Actions runner pod requests GPU resource"
+}

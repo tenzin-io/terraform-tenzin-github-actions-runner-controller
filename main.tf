@@ -64,5 +64,10 @@ resource "helm_release" "actions_runner_deployment" {
     value = "{${local.runner_labels}}"
   }
 
+  set {
+    name  = "runner.gpu_request"
+    value = var.enable_nvidia_gpu ? 1 : 0
+  }
+
   depends_on = [helm_release.actions_runner_controller]
 }
