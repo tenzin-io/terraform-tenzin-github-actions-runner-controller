@@ -33,6 +33,10 @@ resource "helm_release" "actions_runner_controller" {
 
 }
 
+locals {
+  runner_labels = join(",", var.github_runner_labels)
+}
+
 resource "helm_release" "actions_runner_deployment" {
 
   name             = "actions-runner-deployment"
@@ -57,9 +61,8 @@ resource "helm_release" "actions_runner_deployment" {
 
   set {
     name  = "runner.labels"
-    value = "{${var.github_runner_labels}}"
+    value = "{${local.runner_labels}}"
   }
 
   depends_on = [helm_release.actions_runner_controller]
 }
-

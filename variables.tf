@@ -22,9 +22,9 @@ variable "github_runner_ready" {
 }
 
 variable "github_runner_labels" {
-  type        = string
-  default     = ""
-  description = "Comma separated values of labels to place on runner"
+  type        = list(string)
+  default     = ["homelab"]
+  description = "A set of labels to place on the runner for selection"
 }
 
 variable "github_runner_image" {
