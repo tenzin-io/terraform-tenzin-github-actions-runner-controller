@@ -3,10 +3,16 @@ github_org_name: homelab
 runner:
   image: ghcr.io/actions/actions-runner-controller/actions-runner-dind:ubuntu-20.04
   ready: 3
+  gpu_request: 0
+
   labels:
     - homelab
 
   env:
     - name: LOCATION
       value: "homelab"
-  gpu_request: 0
+
+    # https://github.blog/changelog/2022-02-01-github-actions-self-hosted-runners-can-now-disable-automatic-updates/
+    # disable self-update and stick to the version from the image pipeline
+    - name: DISABLE_RUNNER_UPDATE
+      value: "true"
