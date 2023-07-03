@@ -4,7 +4,7 @@ resource "helm_release" "actions_runner_controller" {
   create_namespace = true
   repository       = "https://actions-runner-controller.github.io/actions-runner-controller"
   chart            = "actions-runner-controller"
-  version          = "0.23.0"
+  version          = "0.23.3"
 
   set {
     name  = "authSecret.create"

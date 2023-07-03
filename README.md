@@ -8,12 +8,6 @@ This Terraform module installs GitHub Actions runner controller on a Kubernetes 
 <!-- BEGIN_TF_DOCS -->
 
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.9.0 |
-
 ## Resources
 
 | Name | Type |
