@@ -5,6 +5,7 @@ resource "helm_release" "actions_runner_controller" {
   repository       = "https://actions-runner-controller.github.io/actions-runner-controller"
   chart            = "actions-runner-controller"
   version          = "0.23.3"
+  disable_webhooks = true
 
   set {
     name  = "authSecret.create"
