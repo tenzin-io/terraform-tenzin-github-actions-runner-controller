@@ -29,7 +29,7 @@ variable "github_runner_labels" {
 
 variable "github_runner_image" {
   type        = string
-  default     = "ghcr.io/actions/actions-runner-controller/actions-runner-dind:ubuntu-20.04"
+  default     = "docker.io/summerwind/actions-runner-dind:v2.308.0-ubuntu-22.04"
   description = "The container image of runner"
 }
 
